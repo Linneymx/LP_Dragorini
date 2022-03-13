@@ -28,7 +28,6 @@ button{
     box-shadow: 2px 2px 10px rgba(58, 27, 48, 0.5); /*Sombra boton*/
     color: white;
     background-color: rgb(101, 33, 165);
-
 }
 
 button:hover{
@@ -36,7 +35,7 @@ button:hover{
 }
 
 .container{
-    max-width: 1250px;
+    max-width: 1450px;
     margin: auto;
 }
 
@@ -109,7 +108,6 @@ header a:hover{
 #PrincipalText button{ 
     font-size: 3.50em;
 }
-
 .flex-form input[type="submit"] {
     background: #000000;
     border: 1px solid rgb(101, 33, 165);
@@ -117,9 +115,9 @@ header a:hover{
     color: #fff;
     padding: 0 30px;
     cursor: pointer;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    transition: all 0.2s;
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
   }
   
   .flex-form input[type="submit"]:hover {
@@ -129,12 +127,11 @@ header a:hover{
   }
   
   .flex-form {
-    display: -webkit-box;
     display: flex;
     z-index: 10;
     position: relative;
-    width: 500px;
-    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+    width: 200px;
+    box-shadow: 4px 8px 16px rgba(17, 17, 17, 0.3);
   }
   
   .flex-form > * {
@@ -148,10 +145,14 @@ header a:hover{
     -webkit-appearance: none;
   }
   
-  input[type="search"] {
-    flex-basis: 500px;
+  input[type="Enviar"] {
+    flex-wrap: 200px;
   }
   
+#nosotros2 .container{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 #nosotros2 .container{
     text-align: center;
@@ -214,8 +215,8 @@ header a:hover{
 }
 
 #beneficios .container{
-    text-align: center;
-    padding: 250px 12px;
+    text-align: left;
+    padding: 110px 12px;
 }
 
 #beneficios li{
@@ -258,8 +259,15 @@ footer .container{
     justify-content: center;
     align-items: flex-end;
 }
-/*-------------------------------------------------*/
-@media (min-width: 1180px){
+
+
+
+/* ----- Menu movil ----- */
+
+
+/*-Ajuste para web--------------------------------*/
+
+@media (min-width: 900px){
     header{
         position: fixed;
         width: 100%;
@@ -276,17 +284,64 @@ footer .container{
         padding-right: 20px;
     }
 
-    #PrincipalText h1{ /*web*/
+    #PrincipalText h1{ 
         padding: 5%;
         font-size: 5em;
     }
 
 
-    #PrincipalText h2{ /*web*/
-        padding: 5%;
+    #PrincipalText h2{ 
+        padding: 3%;
         font-size: 3em;
     }
+    
+    #PrincipalText h4{ 
+        padding: 1%;
+        font-size: 2em;
+    }
 
+    .flex-form input[type="submit"] {
+        background: #000000;
+        border: 1px solid rgb(101, 33, 165);
+    
+        color: #fff;
+        padding: 0 30px;
+        cursor: pointer;
+        -webkit-transition: all 0.1s;
+        -moz-transition: all 0.1s;
+        transition: all 0.1s;
+      }
+      
+      .flex-form input[type="submit"]:hover {
+        background-color: rgb(101, 33, 165);
+        border: 1px solid rgb(101, 33, 165);
+    
+      }
+      
+      .flex-form {
+        display:-webkit-box;
+        display: flex;
+        z-index: 10;
+        position: relative;
+        width: 320px;
+        box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.3);
+      }
+      
+      .flex-form > * {
+        border: 0;
+        padding: 0 0 0 10px;
+        background: #fff;
+        line-height: 50px;
+        font-size: 1rem;
+        border-radius: 0;
+        outline: 0;
+        -webkit-appearance: none;
+      }
+      
+      input[type="Enviar"] {
+        flex-basis: 400px;
+      }
+      
     #nosotros2 .container{
         display: flex;
         justify-content: space-evenly;
@@ -303,7 +358,7 @@ footer .container{
     }
 
     #nosotros2 h2{
-        margin-top: 0px;
+        margin-top: 1px;
     }
 
     #nosotros2 .img-container{
@@ -331,8 +386,6 @@ footer .container{
     #nuestros-cursos h3{
         margin-top: 0;
     }
-
-
 
     .carta:first-child{
         background-image: linear-gradient(
@@ -366,8 +419,8 @@ footer .container{
     #beneficios{
         background-image: url("Assets/img4.jpg");
         background-repeat: no-repeat;
-        background-size: 800px 500px;
-        background-position: calc(95vw - 20px) 100px;
+        background-size: 900px 700px;
+        background-position: 0 0;
     }
 
     #beneficios .container{
@@ -375,7 +428,7 @@ footer .container{
     }
 
     #beneficios ul{
-        margin-left: 40px;
+        margin-left: 15px;
     }
 
     #final h2{
@@ -383,19 +436,32 @@ footer .container{
     }
 
     #final button{
-        font-size: 2em;
+        font-size: 4em;
     }
 
     footer .container{
         justify-content: flex-end;
     }
+
+    .footer .groupF{
+    
+        background-color: #1c001d;
+        padding: 15px 10px;
+        text-align: center;
+        color: #fff;
+    }
+    .footer #logoF{ /*Clase logo, imagen o texto*/
+        justify-content: center;
+        padding: 15px 10px;
+        height: 100px;
+        width: 150px;
+    }
 }
-
-@media (min-width: 1180px) {
-
+/* efecto ajuste img*/
+@media (min-width: 800px) {
     
     #beneficios{
-        background-position-x: calc(100vw - 800px);
+        background-position-x: calc(85vw - 100%);
     }
 }
 
