@@ -1,0 +1,347 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+h1{ font-size: 3.4em;}
+h2{ font-size: 2.4em;}
+h3{ font-size: 1.8em;}
+p{ font-size: 1 em;}
+ul{ list-style: none;}
+li{ font-size: 2.25em;}
+
+button{
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 20px;
+    border: 0px solid rgba(0, 0, 0, 0.3); /**/
+    box-shadow: 2px 2px 10px rgba(58, 27, 48, 0.5); /*Sombra boton*/
+    color: white;
+    background-color: rgb(101, 33, 165);
+}
+
+button:hover{
+    background-color: rgb(243, 9, 204);
+}
+
+.container{
+    max-width: 1250px;
+    margin: auto;
+}
+
+.color-acento{ color:rgb(186, 226, 43); } /*Pa resaltar texto*/
+
+header{
+    background-color: rgb(26, 5, 24); /*color encabezado*/
+    
+}
+
+header .logo{ /*Clase logo, imagen o texto*/
+    margin: 0;
+    padding: 0px 10px;
+    font-weight: bold;
+    color: rgb(175, 36, 255);
+    font-size: 1.8em;
+    height: 100px;
+    width: 150px;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header a{ /*texto nav*/
+    padding: 5px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+#PrincipalText{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.8)
+    ),url("Assets/Estrategia1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#PrincipalText h1{
+    color: white;
+}
+
+#PrincipalText button{ 
+    font-size: 3.50em;
+}
+
+#nosotros2 .container{
+    text-align: center;
+    padding: 200px 20px;
+}
+
+#nuestros-cursos{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+}
+
+#nuestros-cursos .container{
+    padding: 120px 12px;
+}
+
+#nuestros-cursos h2{
+    margin-top: 0;
+    font-size: 3.2em;
+}
+
+#nuestros-cursos p{
+    display: none;
+}
+
+#nuestros-cursos .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 10px 0px;
+    margin: 15px;
+    border-radius: 40px;
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Assets/Cur1.jpg");
+
+}
+
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Assets/cur2.jpg");
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url("Assets/cur3.JPG");
+
+}
+
+#beneficios .container{
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#beneficios li{
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30,30,30);
+    color: white;
+    height: 80vh;
+}
+
+#final h2{
+    font-size: 5vw;
+}
+
+#final button{
+    font-size: 5vw;
+}
+
+footer{ /* pie de pagina*/
+    background-color: rgb(230,230,230);
+}
+
+footer p{
+    margin: 0;
+    padding: 12px;
+    color: rgb(100,100,100);
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/*-------------------------------------------------*/
+@media (min-width: 750px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #PrincipalText h1{ /*web*/
+        padding: 5%;
+        font-size: 5em;
+    }
+
+
+    #nosotros2 .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #nosotros2 .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nosotros2 h2{
+        margin-top: 0px;
+    }
+
+    #nosotros2 .img-container{
+        background-image: url("Assets/personaQS.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 600px;
+        width: 400px; 
+    }
+
+    #nuestros-cursos .cursos{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-cursos p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-cursos h2{
+        font-size: 4em;
+    }
+
+    #nuestros-cursos h3{
+        margin-top: 0;
+    }
+
+
+
+    .carta:first-child{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("Assets/Cur1.jpg");
+
+    }
+
+    .carta:nth-child(2){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("Assets/cur2.jpg");
+    }
+
+    .carta:nth-child(3){
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        )
+        ,url("Assets/cur3.JPG");
+
+    }
+
+    #beneficios{
+        background-image: url("Assets/img4.jpg");
+        background-repeat: no-repeat;
+        background-size: 800px 500px;
+        background-position: calc(95vw - 20px) 100px;
+    }
+
+    #beneficios .container{
+        text-align: initial;
+    }
+
+    #beneficios ul{
+        margin-left: 40px;
+    }
+
+    #final h2{
+        font-size: 5em;
+    }
+
+    #final button{
+        font-size: 2em;
+    }
+
+    footer .container{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width: 1250px) {
+
+    
+    #beneficios{
+        background-position-x: calc(100vw - 800px);
+    }
+}
